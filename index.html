@@ -7,21 +7,36 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <style>
+      .row {
+        margin-top: 25vh;
+        margin-left: 50vh;
+      }
+      h1 {
+        margin-top: 0;
+      }
+    </style>
     <title>Secret message</title>
   </head>
   <body>
     <div class="row">
       <div class="col s8 offset-2">
-        <div class="card-panel">
+        <div class="card-panel hide" id="message-show">
+          <h1></h1>
+          <div><a href="./index.html">Create your own secret message</a></div>
+        </div>
+        <div class="card-panel" id="message-card">
           <form action="">
-            <label for=""> Enter a secret message</label>
+            <label> Enter a secret message</label>
             <input type="text" id="message-input" />
             <button class="btn">Create</button>
           </form>
         </div>
-        <div>
-          Share this link with your friends
-          <input type="text" id="link-input" />
+        <div class="card-panel hide" id="link-card">
+          <div>
+            <label>Share this link with your friends</label>
+            <input type="text" id="link-input" />
+          </div>
         </div>
       </div>
     </div>
